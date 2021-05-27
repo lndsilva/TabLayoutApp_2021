@@ -16,19 +16,25 @@
             android:id="@+id/tab1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tab1" />
+            android:text="Gatos" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tab2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tab2" />
+            android:text="Cachorro" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tab3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tab3" />
+            android:text="Peixe" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/idPizzaGrande"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza" />
 
     </com.google.android.material.tabs.TabLayout>
 

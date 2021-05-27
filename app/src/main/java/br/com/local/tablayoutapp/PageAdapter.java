@@ -22,13 +22,12 @@ public class PageAdapter extends FragmentPagerAdapter {
         switch (position) {
             case 0:
                 return new Tab1();
-
             case 1:
                 return new Tab2();
-
             case 2:
                 return new Tab3();
-
+            case 3:
+                return new PizzaPequena_Fragment();
             default:
                 return null;
         }

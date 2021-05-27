@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
-    TabItem tab1, tab2, tab3;
+    TabItem tab1, tab2, tab3, pizzaGrande;
     PagerAdapter pagerAdapter;
 
     @Override
@@ -29,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
         tab1 = findViewById(R.id.tab1);
         tab2 = findViewById(R.id.tab2);
         tab3 = findViewById(R.id.tab3);
+        pizzaGrande = findViewById(R.id.idPizzaGrande);
 
+        //instânciando o PagerAdapter
         pagerAdapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
 
         viewPager.setAdapter(pagerAdapter);
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Ações do clique no tabLayout
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
     }

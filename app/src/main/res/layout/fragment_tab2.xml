@@ -12,13 +12,21 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:textSize="30sp"
-            android:textStyle="bold"
+        <ImageView
+            android:scaleType="centerCrop"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
+            android:src="@drawable/cachorro" />
+
+        <TextView
+            android:textAllCaps="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tab2" />
+            android:layout_gravity="center_horizontal"
+            android:text="Cachorro"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
