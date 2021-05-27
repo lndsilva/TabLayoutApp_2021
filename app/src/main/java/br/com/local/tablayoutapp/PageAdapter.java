@@ -28,6 +28,8 @@ public class PageAdapter extends FragmentPagerAdapter {
                 return new Tab3();
             case 3:
                 return new PizzaPequena_Fragment();
+            case 4:
+                return new PassaroFragment();
             default:
                 return null;
         }
