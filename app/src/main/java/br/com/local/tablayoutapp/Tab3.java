@@ -3,62 +3,65 @@ package br.com.local.tablayoutapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Tab3#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Tab3 extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    RecyclerView mRecyclerView;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    List<Livros> lstLivros;
 
-    public Tab3() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Tab3.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Tab3 newInstance(String param1, String param2) {
-        Tab3 fragment = new Tab3();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
+        @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab3, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab3, container, false);
+
+        lstLivros = new ArrayList<>();
+
+        lstLivros.add(new Livros("A realidade de Madhu", "Ficção Científica", " Madhu é abduzida por uma nave intergaláctica", R.drawable.a_realidade));
+        lstLivros.add(new Livros("Eu e Esse Meu Coração", "Auto ajuda", "Eu e Esse Meu Coração", R.drawable.coracao));
+        lstLivros.add(new Livros("Dieta", "Alimentação", "Este não é mais um livro de dieta: O novo e libertador estilo de vida alimentar para saúde e boa", R.drawable.dieta));
+        lstLivros.add(new Livros("O dilema", "Auto ajuda", "O dilema do porco espinho", R.drawable.dilema));
+        lstLivros.add(new Livros("Como fazer Amigos", "Auto ajuda", "Como fazer amigos", R.drawable.amigos));
+        lstLivros.add(new Livros("The Vegitarian ", "Romance", "The Vegitarian Life", R.drawable.thevigitarian));
+        lstLivros.add(new Livros("The Wild Robot", "Categoria do livro", "Descrição do livro", R.drawable.thewildrobot));
+        lstLivros.add(new Livros("The Martian", "Categoria do livro", "Descrição do livro", R.drawable.themartian));
+        lstLivros.add(new Livros("Privacy", "Categoria do livro", "Descrição do livro", R.drawable.privacy));
+        lstLivros.add(new Livros("Maria Semples", "Categoria do livro", "Descrição do livro", R.drawable.mariasemples));
+        lstLivros.add(new Livros("Hedied With", "Categoria do livro", "Descrição do livro", R.drawable.hediedwith));
+        lstLivros.add(new Livros("O dilema", "Auto ajuda", "O dilema do porco espinho", R.drawable.dilema));
+        lstLivros.add(new Livros("Como fazer Amigos", "Auto ajuda", "Como fazer amigos", R.drawable.amigos));
+        lstLivros.add(new Livros("The Vegitarian ", "Romance", "The Vegitarian Life", R.drawable.thevigitarian));
+        lstLivros.add(new Livros("The Wild Robot", "Categoria do livro", "Descrição do livro", R.drawable.thewildrobot));
+        lstLivros.add(new Livros("The Martian", "Categoria do livro", "Descrição do livro", R.drawable.themartian));
+        lstLivros.add(new Livros("Privacy", "Categoria do livro", "Descrição do livro", R.drawable.privacy));
+        lstLivros.add(new Livros("Maria Semples", "Categoria do livro", "Descrição do livro", R.drawable.mariasemples));
+        lstLivros.add(new Livros("Hedied With", "Categoria do livro", "Descrição do livro", R.drawable.hediedwith));
+        lstLivros.add(new Livros("O poder do agora", "Auto Ajuda", "Um guia para a iluminação espiritual ", R.drawable.poder_agora));
+        lstLivros.add(new Livros("Pai rico, pai pobre para jovens", "Administração e Negócios", "o que a escola não ensina sobre dinheiro", R.drawable.pai));
+
+
+        mRecyclerView = view.findViewById(R.id.idRecyclerView);
+
+        RecyclerViewAdapter mAdapter = new RecyclerViewAdapter(getContext(), lstLivros);
+
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
+
+
+        mRecyclerView.setAdapter(mAdapter);
+
+
+        return view;
     }
 }

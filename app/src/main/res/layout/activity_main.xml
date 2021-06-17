@@ -16,32 +16,15 @@
             android:id="@+id/tab1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_share"
-            android:text="Gatos" />
+            android:text="Salgada" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tab2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cachorro" />
+            android:text="Doce" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Peixe" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/idPizzaGrande"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pizza" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/idPassaro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Passaro" />
 
     </com.google.android.material.tabs.TabLayout>
 

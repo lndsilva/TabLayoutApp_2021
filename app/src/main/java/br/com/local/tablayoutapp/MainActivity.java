@@ -28,9 +28,8 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.idViewPager);
         tab1 = findViewById(R.id.tab1);
         tab2 = findViewById(R.id.tab2);
-        tab3 = findViewById(R.id.tab3);
-        pizzaGrande = findViewById(R.id.idPizzaGrande);
-        idPassaro = findViewById(R.id.idPassaro);
+        tab3 = findViewById(R.id.idTBLivro);
+
 
         //instânciando o PagerAdapter
         pagerAdapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
