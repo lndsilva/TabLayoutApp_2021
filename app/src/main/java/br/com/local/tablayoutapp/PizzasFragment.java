@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -33,6 +34,7 @@ public class PizzasFragment extends Fragment {
 
         //vou utilizar uma linha para cada item do recyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
 
         //Melhorar a performance do recyclerView
         recyclerView.hasFixedSize();
